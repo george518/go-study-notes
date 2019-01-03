@@ -23,12 +23,12 @@ func main() {
 	start := time.Now().UnixNano()
 	go func() {
 		for i := 0; i < 1000; i++ {
-			rwLock.Lock() //写锁
+			//rwLock.Lock() //写锁
 			//lock.Lock() //互斥锁
 			count++
-			time.Sleep(5 * time.Millisecond)
+			//time.Sleep(1 * time.Millisecond)
 			//lock.Unlock()
-			rwLock.Unlock()
+			//rwLock.Unlock()
 		}
 		w.Done()
 	}()
