@@ -43,7 +43,7 @@ func main() {
 		resultChan <- re
 	}()
 
-	time.Sleep(1 * time.Second)
+	time.Sleep(5 * time.Second)
 	cancelFunc()
 	res = <-resultChan
 
